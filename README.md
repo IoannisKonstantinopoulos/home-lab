@@ -1,7 +1,7 @@
 This is a home-lab  of a full DevSecOps solution of automated complete deployment of a service. 
 We should : 
 1. deploy infra [#3](https://github.com/IoannisKonstatinopoulos/home-lab/issues/3)
-2. update infra
+2. update infra : [#7](https://github.com/IoannisKonstatinopoulos/home-lab/issues/7) - [#6](https://github.com/IoannisKonstatinopoulos/home-lab/issues/6)
 3. provision k3s
 4. provision services
 5. check services
