@@ -1,0 +1,7 @@
+---
+# Non-sensitive common variables
+ansible_user: host-username
+
+# Sensitive variables (local only)
+master_node_ip: "sample-ip"
+worker_node_ip: "sample-ip"

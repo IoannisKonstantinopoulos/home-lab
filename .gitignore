@@ -4,6 +4,11 @@
 # But not directories (so Git can look inside them)
 !*/
 !ansible/
+!ansible/
+!**/*.yaml
+!**/*.yml
+!**/*.cfg
+
 # Un-ignore all *.tf &  files anywhere in the project
 !**/*.tf
 !**/*.tfvars.example

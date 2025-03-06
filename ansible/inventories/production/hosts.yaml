@@ -1,0 +1,10 @@
+all:
+  children:
+    master:
+      hosts:
+        master-node:
+          ansible_host: "{{ master_node_ip }}"
+    worker:
+      hosts:
+        worker-node:
+          ansible_host: "{{ worker_node_ip }}"
