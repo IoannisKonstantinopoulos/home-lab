@@ -1,15 +1,19 @@
 # Ignore everything
 *
 
-# But not directories (so Git can look inside them)
+# Allow Git to see directories so it can apply further rules
 !*/
 
-# Un-ignore all *.tf &  files anywhere in the project
+# Un-ignore the ansible directory and all its contents
+!ansible/**
+
+# Un-ignore Terraform files and examples
 !**/*.tf
 !**/*.tfvars.example
-# Un-ignore the README file in the repository root
+
+# Un-ignore the repository README file
 !README.md
 
-# Ignore local Terraform variable values (secrets)
+# Ignore sensitive Terraform variable files
 terraform.tfvars
 secrets.auto.tfvars
