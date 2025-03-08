@@ -7,7 +7,7 @@ terraform {
   }
 }
 
-resource "proxmox_virtual_environment_vm" "ubuntu_vm" {
+resource "proxmox_virtual_environment_vm" "ubuntu_vm_1" {
   name        = var.vm_name_1
   description = var.vm_description_1
   tags        = var.vm_tags

@@ -2,10 +2,19 @@
 proxmox_endpoint     = "https://pve.example.com/"
 proxmox_api_token    = "user@pam!user=xxxxx-xxxx-xxxx-xxxx-xxxxxxxxx"  # Replace with your real API token
 node_name            = "pve-node"
-vm_id                = 9000
 disk_datastore_id    = "vm-datastore"
 init_datastore_id    = "vm-datastore"
 ipv4_address         = "192.168.x.x/24"
 ipv4_gateway         = "192.168.x.x"
 init_username        = "username-dev"
 init_password        = "password-dev"  # Replace with the actual secure password
+
+# resource variables "ubuntu_vm_X"
+vm_name_1           = "vm-1"
+vm_description_1    = "vm-description-1"
+vm_name_2           = "vm-2"
+vm_description_2    = "vm-description-2"
+vm_id_1             = id-1
+vm_id_2             = id-2
+ipv4_address_1      = "192.168.x.x/24"
+ipv4_address_2      = "192.168.x.y/24"
