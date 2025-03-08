@@ -32,13 +32,25 @@ variable "ssh_private_key_path" {
   default     = "~/.ssh/id_ed25519"
 }
 
-variable "vm_name" {
+variable "vm_name_1" {
   description = "Name of the VM"
   type        = string
   default     = "terraform-provider-proxmox-ubuntu-vm"
 }
 
-variable "vm_description" {
+variable "vm_name_2" {
+  description = "Name of the VM"
+  type        = string
+  default     = "terraform-provider-proxmox-ubuntu-vm"
+}
+
+variable "vm_description_1" {
+  description = "Description of the VM"
+  type        = string
+  default     = "Managed by Terraform"
+}
+
+variable "vm_description_2" {
   description = "Description of the VM"
   type        = string
   default     = "Managed by Terraform"
@@ -55,7 +67,12 @@ variable "node_name" {
   type        = string
 }
 
-variable "vm_id" {
+variable "vm_id_1" {
+  description = "Unique VM ID"
+  type        = number
+}
+
+variable "vm_id_2" {
   description = "Unique VM ID"
   type        = number
 }
@@ -118,7 +135,12 @@ variable "dns_servers" {
   default     = ["1.1.1.1", "8.8.8.8"]
 }
 
-variable "ipv4_address" {
+variable "ipv4_address_1" {
+  description = "IPv4 address with CIDR"
+  type        = string
+}
+
+variable "ipv4_address_2" {
   description = "IPv4 address with CIDR"
   type        = string
 }
