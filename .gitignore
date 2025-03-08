@@ -2,10 +2,7 @@
 *
 # Allow Git to see directories so it can apply further rules
 !*/
-
-
 # ---
-
 
 ## Terraform section
 # Un-ignore Terraform files and examples
@@ -21,4 +18,4 @@ secrets.auto.tfvars
 # Un-ignore the ansible directory and all its contents
 !ansible/**
 # Ignore the combined variables file containing sensitive data
-ansible/inventories/production/group_vars
+ansible/inventories/production/group_vars/all.yaml
