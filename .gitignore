@@ -21,4 +21,4 @@ secrets.auto.tfvars
 # Un-ignore the ansible directory and all its contents
 !ansible/**
 # Ignore the combined variables file containing sensitive data
-inventories/production/group_vars/all.yaml
+ansible/inventories/production/group_vars
