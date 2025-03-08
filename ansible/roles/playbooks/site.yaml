@@ -1,0 +1,18 @@
+---
+- name: Configure Base OS on all nodes
+  hosts: all
+  become: yes
+  roles:
+    - base
+
+- name: Configure k3s Master Node
+  hosts: master
+  become: yes
+  roles:
+    - k3s_master
+
+- name: Configure k3s Worker Node
+  hosts: worker
+  become: yes
+  roles:
+    - k3s_worker

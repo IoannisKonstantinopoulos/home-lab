@@ -4,7 +4,9 @@ all:
       hosts:
         master-node:
           ansible_host: "{{ master_node_ip }}"
+          ansible_ssh_pass: "{{ admin_password }}"
     worker:
       hosts:
         worker-node:
           ansible_host: "{{ worker_node_ip }}"
+          ansible_ssh_pass: "{{ admin_password }}"
