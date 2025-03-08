@@ -1,25 +1,3 @@
-# ---
-# - name: Update apt cache
-#   apt:
-#     update_cache: yes
-#   become: yes
-
-# - name: Upgrade packages
-#   apt:
-#     upgrade: dist
-#   become: yes
-
-# - name: Install essential packages
-#   apt:
-#     name:
-#       - curl
-#       - wget
-#       - vim
-#       - git
-#       - qemu-guest-agent
-#       - net-tools
-#     state: present
-#   become: yes
 ---
 - name: Update apt cache
   apt:
@@ -31,7 +9,7 @@
     upgrade: dist
   become: yes
 
-- name: Uninstall essential packages with purge
+- name: Install essential packages
   apt:
     name:
       - curl
@@ -40,6 +18,5 @@
       - git
       - qemu-guest-agent
       - net-tools
-    state: absent
-    purge: yes
+    state: present
   become: yes
