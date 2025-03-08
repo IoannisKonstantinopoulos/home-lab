@@ -2,6 +2,12 @@
 # Non-sensitive common variables
 ansible_user: administrator
 # Sensitive variables (local only)
+<<<<<<< HEAD
 master_node_ip: "192.168.2.x"
 worker_node_ip: "192.168.2.x"
 admin_password: "1234xxxx"
+=======
+master_node_ip: "192.168.x.x"
+worker_node_ip: "192.168.x.x"
+admin_password: "xxxxxxx"
+>>>>>>> 55f335fa2dac70bb2889640ecc5f84721715e3d9
