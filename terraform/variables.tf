@@ -21,6 +21,11 @@ variable "ssh_agent" {
   default     = true
 }
 
+variable "ssh_key_path" {
+  description = "Path to the SSH private key"
+  type        = string
+}
+
 variable "ssh_username" {
   description = "SSH username for provider access"
   type        = string
