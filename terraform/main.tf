@@ -48,7 +48,7 @@ resource "proxmox_virtual_environment_vm" "ubuntu_vm_1" {
     }
 
     user_account {
-      # keys = [trimspace(tls_private_key.ubuntu_vm_key.public_key_openssh)]
+      keys     = [local.private_key]
       password = var.init_password
       username = var.init_username
     }
@@ -106,6 +106,7 @@ resource "proxmox_virtual_environment_vm" "ubuntu_vm_2" {
     }
 
     user_account {
+      keys     = [local.private_key]
       password = var.init_password
       username = var.init_username
     }
@@ -129,8 +130,21 @@ resource "proxmox_virtual_environment_download_file" "ubuntu_cloud_image" {
   url          = "https://cloud-images.ubuntu.com/jammy/current/jammy-server-cloudimg-amd64.img"
 }
 
-resource "random_password" "ubuntu_vm_password" {
-  length           = 16
-  special          = false
-  override_special = "_%@"
+
+resource "tls_private_key" "ubuntu_vm_key" {
+  algorithm = "RSA"
+  rsa_bits  = 2048
+}
+
+output "ubuntu_vm_private_key" {
+  value     = tls_private_key.ubuntu_vm_key.private_key_pem
+  sensitive = true
+}
+
+output "ubuntu_vm_public_key" {
+  value = tls_private_key.ubuntu_vm_key.public_key_openssh
+}
+
+locals {
+  private_key = file(pathexpand(var.ssh_key_path))
 }
