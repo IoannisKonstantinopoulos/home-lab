@@ -4,11 +4,12 @@ proxmox_api_token    = "user@pam!user=xxxxx-xxxx-xxxx-xxxx-xxxxxxxxx"  # Replace
 node_name            = "pve-node"
 disk_datastore_id    = "vm-datastore"
 init_datastore_id    = "vm-datastore"
-ipv4_address         = "192.168.x.x/24"
 ipv4_gateway         = "192.168.x.x"
 init_username        = "username-dev"
 init_password        = "password-dev"  # Replace with the actual secure password
-
+ssh_key_path        = "~/.ssh/local-generated-key.pub"
+vm_memory           = 8192
+dns_servers         = ["x.x.x.x","y.y.y.y"]
 # resource variables "ubuntu_vm_X"
 vm_name_1           = "vm-1"
 vm_description_1    = "vm-description-1"
