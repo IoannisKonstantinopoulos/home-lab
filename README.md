@@ -1,11 +1,22 @@
-This is a home-lab  of a full DevSecOps solution of automated complete deployment of a service. 
-We should : 
-1. deploy infra [#3](https://github.com/IoannisKonstatinopoulos/home-lab/issues/3)
-2. update infra : [#7](https://github.com/IoannisKonstatinopoulos/home-lab/issues/7) - [#6](https://github.com/IoannisKonstatinopoulos/home-lab/issues/6)
-3. provision k3s [#10](https://github.com/IoannisKonstantinopoulos/home-lab/issues/10)
-4. provision security services
-6. validate security services
-7. deploy app
-8. check app
-9. be aware of the security issues
-10. Go to sleep
+# DevSecOps Automated Implementation
+
+This repository provides a fully automated DevSecOps solution that streamlines your entire software delivery pipeline—from infrastructure provisioning to continuous monitoring and security validation.
+
+## Overview
+
+**Key Components:**
+
+- **Infrastructure Provisioning (Terraform):**  
+  Automate cloud resource setup and manage state remotely.
+
+- **Configuration Management (Ansible):**  
+  Configure nodes, install a lightweight K3s cluster, and run custom verification tasks.
+
+- **CI/CD Pipeline (GitHub Actions):**  
+  Automate deployments, testing, and linting.
+
+- **Helm-Based Deployments:**  
+  Deploy essential security and monitoring tools like Trivy, Falco, and Graylog.
+
+- **Continuous Monitoring:**  
+  Integrate automated security scanning and real-time log collection.
