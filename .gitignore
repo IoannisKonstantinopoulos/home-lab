@@ -13,7 +13,7 @@ terraform.tfvars
 secrets.auto.tfvars
 # Un-ignore the repository README file
 !README.md
-
+!**/*.md
 ## Ansible section
 # Un-ignore the ansible directory and all its contents
 !ansible/**
