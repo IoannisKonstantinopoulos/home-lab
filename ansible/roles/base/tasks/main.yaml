@@ -1,16 +1,10 @@
 ---
-- name: Update apt cache
-  apt:
-    update_cache: yes
-  become: yes
-
-- name: Upgrade packages
-  apt:
-    upgrade: dist
-  become: yes
+- name: Update the package information
+  ansible.builtin.package:
+    update_cache: true
 
 - name: Install essential packages
-  apt:
+  ansible.builtin.package :
     name:
       - curl
       - wget
@@ -20,3 +14,14 @@
       - net-tools
     state: present
   become: yes
+  
+- name: Install qemu-guest-agent
+  ansible.builtin.package:
+    name: qemu-guest-agent
+    state: present
+
+- name: Enable the qemu-guest-agent service
+  ansible.builtin.systemd:
+    name: qemu-guest-agent
+    enabled: true
+    state: started
