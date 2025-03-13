@@ -1,4 +1,10 @@
 ---
+- name: Upgrade APT
+  ansible.builtin.apt:
+    upgrade: full
+    update_cache: true
+  when: ansible_pkg_mgr == 'apt'
+
 - name: Update the package information
   ansible.builtin.package:
     update_cache: true
